@@ -13,4 +13,8 @@
 
 &left_encoder {
     status = "okay";
+}
+
+&mkp {
+    MB2 { param = <2>; };
 };
