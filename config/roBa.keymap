@@ -105,8 +105,6 @@
 &kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &trans      &trans  &trans            &kp LG(LEFT_BRACKET)    &kp DOWN_ARROW  &kp LG(RIGHT_BRACKET)    &trans
 &trans          &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                                             &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         SCROLL {
