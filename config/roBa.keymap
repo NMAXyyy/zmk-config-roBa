@@ -40,10 +40,10 @@
             key-positions = <20 21>;
         };
 
-        MB2 {
-            bindings = <&mkp MB2>;
-            key-positions = <26 27>;
-        };
+        //MB2 {
+          //  bindings = <&mkp MB2>;
+            //key-positions = <26 27>;
+        //};
     };
 
     macros {
