@@ -22,7 +22,7 @@
 
         mb1 {
             bindings = <&mkp MB1>;
-            key-positions = <18 19>;
+            key-positions = <19 20>;
             layers = <0>;
         };
 
@@ -44,12 +44,11 @@
 
     behaviors {
         //lt_to_layer_0: lt_to_layer_0 {
-            //compatible = "zmk,behavior-hold-tap";
-            //label = "LAYER_TAP_TO_0";
-            //bindings = <&mo>, <&to_layer_0>;
-
-            //#binding-cells = <2>;
-            //tapping-term-ms = <200>;
+        //compatible = "zmk,behavior-hold-tap";
+        //label = "LAYER_TAP_TO_0";
+        //bindings = <&mo>, <&to_layer_0>;
+        //#binding-cells = <2>;
+        //tapping-term-ms = <200>;
         //};
 
         encoder_msc_down_up: encoder_msc_down_up {
@@ -105,10 +104,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB2  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
 
             //sensor-bindings = <&scroll_up_down>;
