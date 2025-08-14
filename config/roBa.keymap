@@ -67,10 +67,10 @@
 
         default_layer {
             bindings = <
-&kp Q           &kp W             &kp E         &kp R      &kp T                                                                &kp Y        &kp U    &kp I      &kp O    &kp P
-&kp A           &kp S             &kp D         &kp F      &kp G        &mkp MB2                     &kp BACKSPACE              &kp H        &kp J    &lt 4 K    &kp L    &kp MINUS
-&kp Z           &kp X             &kp C         &kp V      &kp B        &mt LEFT_GUI LANGUAGE_2      &mt LEFT_SHIFT LANGUAGE_1  &kp N        &kp M    &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &lt 1 TAB  &lt 2 SPACE  &mkp MB1                     &kp LEFT_GUI               &lt 3 ENTER                               &mt RIGHT_SHIFT ESCAPE
+&kp Q           &kp W             &kp E         &kp R         &kp T                                                                  &kp Y        &kp U  &kp I      &kp O    &kp P
+&kp A           &kp S             &kp D         &kp F         &kp G        &mkp MB2                       &kp TAB                    &kp H        &kp J  &kp K      &lt 4 L  &kp MINUS
+&kp Z           &kp X             &kp C         &kp V         &kp B        &mt LEFT_SHIFT LANGUAGE_2      &mt LEFT_SHIFT LANGUAGE_1  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &lt 3 SPACE  &lt 1 TAB                      &kp BACKSPACE              &lt 2 ENTER                             &mt RIGHT_SHIFT ESCAPE
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -87,10 +87,10 @@
 
         MOVE {
             bindings = <
-&none  &none  &none  &none   &none                                             &kp LC(LEFT_ARROW)     &kp LG(LS(LEFT_ARROW))  &kp UP_ARROW    &kp LG(LS(RIGHT_ARROW))  &kp LC(RIGHT_ARROW)
-&none  &none  &none  &none   &none   &trans              &kp DEL               &kp LG(LEFT_ARROW)     &kp LEFT_ARROW          &kp LEFT_SHIFT  &kp RIGHT_ARROW          &kp LG(RIGHT_ARROW)
-&none  &none  &none  &none   &none   &kp LEFT_SHIFT      &none                 &kp LC(UP_ARROW)       &kp LG(LS(TAB))         &kp DOWN_ARROW  &kp LG(TAB)              &none
-&none  &none  &none  &trans  &trans  &trans              &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)                                                                   &none
+&none  &none  &none  &none   &none                               &kp LC(LEFT_ARROW)    &kp LG(LS(LEFT_ARROW))  &kp UP_ARROW      &kp LG(LS(RIGHT_ARROW))  &kp LC(RIGHT_ARROW)
+&none  &none  &none  &none   &none   &trans              &none   &kp LG(LEFT_ARROW)    &kp LEFT_ARROW          &kp DOWN_ARROW    &kp RIGHT_ARROW          &kp LG(RIGHT_ARROW)
+&none  &none  &none  &none   &none   &kp LEFT_SHIFT      &none   &kp LG(LEFT_BRACKET)  &kp LG(LS(TAB))         &kp LC(UP_ARROW)  &kp LG(TAB)              &kp LG(RIGHT_BRACKET)
+&none  &none  &none  &trans  &trans  &trans              &trans  &trans                                                                                   &none
             >;
         };
 
