@@ -22,13 +22,13 @@
 
         mb1 {
             bindings = <&mkp MB1>;
-            key-positions = <18 19>;
+            key-positions = <19 20>;
             layers = <0>;
         };
 
         mb2 {
             bindings = <&mkp MB2>;
-            key-positions = <26 27>;
+            key-positions = <31 32>;
             layers = <0>;
         };
     };
@@ -81,16 +81,16 @@
 &kp TILDE  &kp EXCLAMATION  &kp AT_SIGN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                                               &kp EQUAL             &kp N7  &kp N8  &kp N9  &kp N0
 &kp HASH   &kp DOLLAR       &kp PERCENT  &kp LBKT              &kp RBKT               &trans                 &kp PLUS              &kp MINUS             &kp N4  &kp N5  &kp N6  &kp UNDERSCORE
 &kp CARET  &kp AMPERSAND    &kp SEMI     &kp COLON             &kp SQT                &kp DOUBLE_QUOTES      &kp ASTERISK          &kp FSLH              &kp N1  &kp N2  &kp N3  &kp BSLH
-&none      &none            &none        &none                 &trans                 &none                  &kp LG(LS(NUMBER_3))  &kp LS(LG(NUMBER_4))                          &none
+&trans     &trans           &trans       &trans                &trans                 &trans                 &kp LG(LS(NUMBER_3))  &kp LS(LG(NUMBER_4))                          &none
             >;
         };
 
         MOVE {
             bindings = <
-&none  &none  &none  &none   &none                               &kp LC(LEFT_ARROW)    &kp LG(LS(LEFT_ARROW))  &kp UP_ARROW      &kp LG(LS(RIGHT_ARROW))  &kp LC(RIGHT_ARROW)
-&none  &none  &none  &none   &none   &trans              &none   &kp LG(LEFT_ARROW)    &kp LEFT_ARROW          &kp DOWN_ARROW    &kp RIGHT_ARROW          &kp LG(RIGHT_ARROW)
-&none  &none  &none  &none   &none   &kp LEFT_SHIFT      &none   &kp LG(LEFT_BRACKET)  &kp LG(LS(TAB))         &kp LC(UP_ARROW)  &kp LG(TAB)              &kp LG(RIGHT_BRACKET)
-&none  &none  &none  &trans  &trans  &trans              &trans  &trans                                                                                   &none
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR                      &kp LC(LEFT_ARROW)    &kp LG(LS(LEFT_ARROW))  &kp UP_ARROW      &kp LG(LS(RIGHT_ARROW))  &kp LC(RIGHT_ARROW)
+&none         &none         &none         &none         &none       &trans      &none   &kp LG(LEFT_ARROW)    &kp LEFT_ARROW          &kp DOWN_ARROW    &kp RIGHT_ARROW          &kp LG(RIGHT_ARROW)
+&none         &none         &none         &none         &none       &none       &none   &kp LG(LEFT_BRACKET)  &kp LG(LS(TAB))         &kp LC(UP_ARROW)  &kp LG(TAB)              &kp LG(RIGHT_BRACKET)
+&trans        &trans        &trans        &trans        &trans      &trans      &trans  &trans                                                                                   &none
             >;
         };
 
@@ -99,7 +99,7 @@
 &none  &none  &none  &none  &none                     &none  &kp F7  &kp F8  &kp F9  &kp F10
 &none  &none  &none  &none  &none  &trans      &none  &none  &kp F4  &kp F5  &kp F6  &kp F11
 &none  &none  &none  &none  &none  &none       &none  &none  &kp F1  &kp F2  &kp F3  &kp F12
-&none  &none  &none  &none  &none  &to 5       &none  &none                          &none
+&none  &none  &none  &none  &none  &none       &none  &none                          &none
             >;
         };
 
@@ -112,15 +112,6 @@
             >;
 
             //sensor-bindings = <&scroll_up_down>;
-        };
-
-        Setting {
-            bindings = <
-&trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
-            >;
         };
     };
 };
