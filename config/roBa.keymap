@@ -9,8 +9,7 @@
 };
 
 &trackball {
-    automouse-layer = <4>;
-    scroll-layers = <5>;
+    scroll-layers = <4>;
 };
 
 / {
@@ -20,11 +19,13 @@
         MB1 {
             bindings = <&mkp MB1>;
             key-positions = <19 20>;
+            layers = <0>;
         };
 
         MB2 {
             bindings = <&mkp MB2>;
             key-positions = <7 8>;
+            layers = <0>;
         };
     };
 
