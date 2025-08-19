@@ -68,21 +68,19 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp Q           &kp W             &kp E         &kp R         &kp T                                                                &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&kp A           &kp S             &kp D         &kp F         &kp G     &kp TAB                        &kp TAB                     &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&lt 3 Z         &kp X             &kp C         &kp V         &kp B     &mt LEFT_SHIFT LANGUAGE_2      &mt RIGHT_SHIFT LANGUAGE_1  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &mkp MB1  &kp BACKSPACE                  &lt 2 SPACE                 &lt 1 ENTER                             &kp ESCAPE
             >;
-
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
-        FUNCTION {
+        MOVE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &kp F12
+&trans        &trans        &trans      &trans  &trans                      &trans              &kp LC(LEFT_ARROW)    &kp LC(UP_ARROW)  &kp LC(RIGHT_ARROW)    &trans
+&trans        &trans        &trans      &trans  &trans  &trans      &trans  &trans              &kp LG(LEFT_BRACKET)  &kp UP_ARROW      &kp LG(RIGHT_BRACKET)  &trans
+&trans        &trans        &trans      &trans  &trans  &trans      &trans  &kp LG(LEFT_ARROW)  &kp LEFT_ARROW        &kp DOWN_ARROW    &kp RIGHT_ARROW        &kp LG(RIGHT_ARROW)
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_CLR  &trans  &trans  &trans      &trans  &trans                                                                             &trans
             >;
         };
 
@@ -130,6 +128,15 @@
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+            >;
+        };
+
+        layer_7 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
     };
