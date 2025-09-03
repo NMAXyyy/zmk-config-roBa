@@ -20,6 +20,21 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        cmd_tab_hold: cmd_tab_hold {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&cmd_tab_hold>,
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LEFT_GUI>;
+
+            label = "CMD_TAB_HOLD";
+        };
     };
 
     behaviors {
@@ -38,10 +53,10 @@
 
         default_layer {
             bindings = <
-&lt 3 Q           &kp W        &kp E         &kp R          &kp T                                                              &kp Y        &kp U  &kp I      &kp O         &kp P
-&kp A             &kp S        &kp D         &kp F          &kp G        &kp TAB                      &kp TAB                  &kp H        &kp J  &kp K      &lt 4 L       &kp MINUS
-&kp Z             &kp X        &kp C         &kp V          &kp B        &kp LEFT_SHIFT               &kp RIGHT_SHIFT          &kp N        &kp M  &kp COMMA  &lt 5 PERIOD  &kp SLASH
-&kp LEFT_CONTROL  &kp LG(TAB)  &kp LEFT_ALT  &kp BACKSPACE  &lt 2 SPACE  &mt LEFT_GUI LANGUAGE_2      &mt LEFT_GUI LANGUAGE_1  &lt 1 ENTER                                  &kp ESCAPE
+&lt 3 Q           &kp W          &kp E         &kp R          &kp T                                                              &kp Y        &kp U  &kp I      &kp O         &kp P
+&kp A             &kp S          &kp D         &kp F          &kp G        &kp TAB                      &kp TAB                  &kp H        &kp J  &kp K      &lt 5 L       &kp MINUS
+&kp Z             &kp X          &kp C         &kp V          &kp B        &kp LEFT_SHIFT               &kp RIGHT_SHIFT          &kp N        &kp M  &kp COMMA  &lt 4 PERIOD  &kp SLASH
+&kp LEFT_CONTROL  &cmd_tab_hold  &kp LEFT_ALT  &kp BACKSPACE  &lt 2 SPACE  &mt LEFT_GUI LANGUAGE_2      &mt LEFT_GUI LANGUAGE_1  &lt 1 ENTER                                  &kp ESCAPE
             >;
         };
 
@@ -84,8 +99,8 @@
         MAUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB2  &mkp MB1  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
             >;
         };
