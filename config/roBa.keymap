@@ -42,6 +42,19 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+         cmd_tab_hold: cmd_tab_hold {
+            compatible = "zmk,behavior-macro";
+            label = "CMD_TAB_HOLD";
+            #binding-cells = <0>;
+
+            // キー押下時に実行される処理
+            bindings = <&macro_press &kp LG   // Cmd 押す
+                        &macro_tap &kp TAB>; // Tab を一瞬押す
+
+            // キー解放時に実行される処理
+            bindings-release = <&macro_release &kp LG>; // Cmd 解放
+        };
     };
 
     keymap {
