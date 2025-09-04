@@ -14,6 +14,7 @@
     combos { compatible = "zmk,combos"; };
 
     macros {
+        
         //to_layer_0: to_layer_0 {
             //compatible = "zmk,behavior-macro-one-param";
             //#binding-cells = <1>;
@@ -21,15 +22,14 @@
             //label = "TO_LAYER_0";
         //};
 
-        cmd_tab_hold: cmd_tab_hold {
+          cmd_tab_hold: cmd_tab_hold {
             compatible = "zmk,behavior-macro";
+            label = "CMD_TAB_HOLD";
             #binding-cells = <0>;
             bindings = <&macro_press &kp LG>,      // Cmd を押す
                        <&macro_tap &kp TAB>,      // Tab を一瞬押す
-                       <&macro_release &kp LG>;   // Cmd を離す（キー解放時に）
-        };
-
-            label = "CMD_TAB_HOLD";
+                       <&macro_release &kp LG>;   // Cmd を離す
+            };
         };
     };
 
