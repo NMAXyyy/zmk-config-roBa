@@ -13,49 +13,25 @@
 / {
     combos { compatible = "zmk,combos"; };
 
-    macros {
-        
-        //to_layer_0: to_layer_0 {
-            //compatible = "zmk,behavior-macro-one-param";
-            //#binding-cells = <1>;
-            //bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            //label = "TO_LAYER_0";
-        //};
-
-          cmd_tab_hold: cmd_tab_hold {
-            compatible = "zmk,behavior-macro";
-            label = "CMD_TAB_HOLD";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LG>,      // Cmd を押す
-                       <&macro_tap &kp TAB>,      // Tab を一瞬押す
-                       <&macro_release &kp LG>;   // Cmd を離す
-            };
-        };
-    };
-
     behaviors {
-        lt_to_layer_0: lt_to_layer_0 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-         cmd_tab_hold: cmd_tab_hold {
+        
+        cmd_tab_hold: cmd_tab_hold {
             compatible = "zmk,behavior-macro";
             label = "CMD_TAB_HOLD";
             #binding-cells = <0>;
 
-            // キー押下時に実行される処理
-            bindings = <&macro_press &kp LG   // Cmd 押す
-                        &macro_tap &kp TAB>; // Tab を一瞬押す
+            // キー押下時に実行
+            bindings = <
+                &macro_press &kp LG   // Cmd 押しっぱなし開始
+                &macro_tap   &kp TAB  // Tab を一度だけタップ
+            >;
 
-            // キー解放時に実行される処理
-            bindings-release = <&macro_release &kp LG>; // Cmd 解放
+            // キー離したときに実行
+            bindings-release = <
+                &macro_release &kp LG // Cmd を離す
+            >;
         };
-    };
+    }; 
 
     keymap {
         compatible = "zmk,keymap";
