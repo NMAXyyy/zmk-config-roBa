@@ -22,12 +22,12 @@
 
             // キー押下時に実行
             bindings = <
-                &macro press   &kp LG   // Cmd 押しっぱなし開始
-                &macro tap     &kp TAB  // Tab を一度だけタップ
+                &macro_press   &kp LG
+                &macro_tap     &kp TAB
             >;
             // キー離したときに実行
             bindings-release = <
-                &macro release &kp LG   // Cmd を離す
+                &macro_release &kp LG
             >;
         };
     }; 
