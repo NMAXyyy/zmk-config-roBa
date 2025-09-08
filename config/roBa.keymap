@@ -11,10 +11,15 @@
 &trackball { scroll-layers = <4>; };
 
 / {
-    combos { compatible = "zmk,combos"; };
+     macros {
+        compatible = "zmk,macros";
+    };    
+
+    combos {
+        compatible = "zmk,combos";
+    };
 
     behaviors {
-        
         cmd_tab_hold: cmd_tab_hold {
             compatible = "zmk,behavior-macro";
             label = "CMD_TAB_HOLD";
