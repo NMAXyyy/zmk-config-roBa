@@ -33,9 +33,10 @@
     combos {
         compatible = "zmk,combos";
 
-        MB2 {
+        mb2 {
             bindings = <&mkp MB2>;
             key-positions = <31 32>;
+            layers = <0>;
         };
     };
 
