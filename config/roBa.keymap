@@ -70,10 +70,10 @@
 
         win_layer {
             bindings = <
-&lt 3 Q           &kp W          &kp E    &kp R                    &kp T                                                                     &kp Y        &kp U  &kp I     &kp O        &kp P
-&kp A             &kp S          &kp D    &kp F                    &kp G                    &kp COMMA                 &kp PERIOD             &kp H        &kp J  &kp K     &kp L        &kp MINUS
-&mt LSHIFT Z      &kp X          &kp C    &kp V                    &kp B                    &kp LEFT_PARENTHESIS      &kp RIGHT_PARENTHESIS  &kp N        &kp M  &mkp MB1  &lt 4 SLASH  &mt RIGHT_SHIFT QMARK
-&kp LEFT_CONTROL  &cmd_tab_hold  &kp TAB  &mt LEFT_ALT LANGUAGE_2  &mt LEFT_GUI LANGUAGE_1  &kp BACKSPACE             &lt 1 SPACE            &lt 2 ENTER                                &kp ESCAPE
+&lt 3 Q       &kp W          &kp E    &kp R                    &kp T                                                                         &kp Y        &kp U  &kp I     &kp O        &kp P
+&kp A         &kp S          &kp D    &kp F                    &kp G                        &kp COMMA                 &kp PERIOD             &kp H        &kp J  &kp K     &kp L        &kp MINUS
+&mt LSHIFT Z  &kp X          &kp C    &kp V                    &kp B                        &kp LEFT_PARENTHESIS      &kp RIGHT_PARENTHESIS  &kp N        &kp M  &mkp MB1  &lt 4 SLASH  &mt RIGHT_SHIFT QMARK
+&kp LEFT_GUI  &cmd_tab_hold  &kp TAB  &mt LEFT_ALT LANGUAGE_2  &mt LEFT_CONTROL LANGUAGE_1  &kp BACKSPACE             &lt 6 SPACE            &lt 7 ENTER                                &kp DELETE
             >;
         };
 
@@ -110,6 +110,24 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
+        WIN_SYMNUM {
+            bindings = <
+&kp AMPERSAND               &kp ASTERISK  &kp TILDE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                                       &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp N0
+&kp DOLLAR                  &kp PERCENT   &kp CARET  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES      &kp ASTERISK  &kp PLUS   &kp N4  &kp N5  &kp N6  &kp UNDERSCORE
+&mt LEFT_SHIFT EXCLAMATION  &kp AT_SIGN   &kp HASH   &kp COLON             &kp SEMICOLON          &kp SQT                &kp SLASH     &kp MINUS  &kp N1  &kp N2  &kp N3  &mt RIGHT_SHIFT NON_US_BACKSLASH
+&trans                      &trans        &trans     &trans                &trans                 &trans                 &trans        &trans                             &trans
+            >;
+        };
+
+        WIN_MOVE {
+            bindings = <
+&trans        &trans              &kp LG(UP_ARROW)    &trans               &trans                      &trans    &kp LS(LC(TAB))     &kp UP_ARROW    &kp LC(TAB)          &kp LG(LS(LEFT_ARROW))
+&trans        &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &trans  &trans      &trans  &kp HOME  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW      &kp END
+&trans        &trans              &trans              &trans               &trans  &trans      &trans  &trans    &kp LA(LEFT_ARROW)  &kp LG(TAB)     &kp LA(RIGHT_ARROW)  &trans
+&bt BT_SEL 0  &bt BT_SEL 1        &bt BT_SEL 2        &trans               &trans  &trans      &trans  &trans                                                             &trans
             >;
         };
     };
