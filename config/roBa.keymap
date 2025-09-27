@@ -25,7 +25,7 @@
             display-name = "Toggle Layer Off";
             toggle-mode = "off";
         };
-    }
+    };
 
     macros {
         compatible = "zmk,macros";
