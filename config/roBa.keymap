@@ -72,7 +72,7 @@
             label = "BT0";
         };
 
-        bt1: bt2 {
+        bt1: bt1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -82,7 +82,7 @@
                 <&macro_wait_time 500>,
                 <&tog_on 1>;
 
-            label = "BT2";
+            label = "BT1";
         };
     };
 
