@@ -108,10 +108,10 @@
 
         WIN_LAYER {
             bindings = <
-&lt 3 Q       &kp W         &kp E    &kp R                      &kp T                                                        &kp Y        &kp U  &kp I     &kp O        &kp P
-&kp A         &kp S         &kp D    &kp F                      &kp G                        &kp COMMA          &kp PERIOD   &kp H        &kp J  &kp K     &kp L        &kp MINUS
-&mt LSHIFT Z  &kp X         &kp C    &kp V                      &kp B                        &kp ESCAPE         &kp TAB      &kp N        &kp M  &mkp MB1  &lt 2 SLASH  &mt RIGHT_SHIFT QMARK
-&kp LEFT_GUI  &win_alt_tab  &kp TAB  &mt LEFT_ALT INT_MUHENKAN  &mt LEFT_CONTROL INT_HENKAN  &kp BACKSPACE      &lt 5 SPACE  &lt 4 ENTER                                &kp DELETE
+&lt 3 Q       &kp W  &kp E  &kp R         &kp T                                                   &kp Y        &kp U  &kp I     &kp O        &kp P
+&kp A         &kp S  &kp D  &kp F         &kp G               &none                    &none      &kp H        &kp J  &kp K     &kp L        &lt 3 ENTER
+&mt LSHIFT Z  &kp X  &kp C  &kp V         &kp B               &kp ESCAPE               &kp SLASH  &kp N        &kp M  &mkp MB1  &lt 2 MINUS  &mt RIGHT_SHIFT BACKSPACE
+&kp LEFT_GUI  &none  &none  &win_alt_tab  &mt LEFT_ALT COMMA  &mt LEFT_GUI PERIOD      &lt 4 TAB  &lt 5 SPACE                                &kp DELETE
             >;
         };
 
@@ -133,12 +133,12 @@
             >;
         };
 
-        FN {
+        WIN_FN {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                                   &trans               &kp F7  &kp F8  &kp F9  &kp F10
+&trans  &trans  &trans  &trans  &trans  &trans      &trans               &trans               &kp F4  &kp F5  &kp F6  &kp F11
+&trans  &trans  &trans  &trans  &trans  &trans      &trans               &trans               &kp F1  &kp F2  &kp F3  &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans      &kp INTERNATIONAL_5  &kp INTERNATIONAL_4                          &trans
             >;
         };
 
@@ -153,10 +153,10 @@
 
         WIN_MOVE {
             bindings = <
-&trans    &trans              &kp LG(UP_ARROW)    &trans               &trans                      &trans    &kp LS(LC(TAB))     &kp UP_ARROW    &kp LC(TAB)          &kp LG(LS(LEFT_ARROW))
-&trans    &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &trans  &trans      &trans  &kp HOME  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW      &kp END
-&trans    &trans              &trans              &trans               &trans  &trans      &trans  &trans    &kp LA(LEFT_ARROW)  &kp LG(TAB)     &kp LA(RIGHT_ARROW)  &trans
-&bt0_win  &bt1_mac            &bt BT_CLR          &trans               &trans  &trans      &trans  &trans                                                             &trans
+&trans    &trans              &kp LG(UP_ARROW)         &trans               &trans                      &trans    &kp LS(LC(TAB))     &kp UP_ARROW    &kp LC(TAB)          &trans
+&trans    &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)       &kp LG(RIGHT_ARROW)  &trans  &trans      &trans  &kp HOME  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW      &kp END
+&trans    &trans              &kp LG(LS(RIGHT_ARROW))  &trans               &trans  &trans      &trans  &trans    &kp LA(LEFT_ARROW)  &kp LG(TAB)     &kp LA(RIGHT_ARROW)  &trans
+&bt0_win  &bt1_mac            &bt BT_CLR               &trans               &trans  &trans      &trans  &trans                                                             &trans
             >;
         };
 
