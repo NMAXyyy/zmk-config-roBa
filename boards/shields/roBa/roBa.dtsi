@@ -129,6 +129,8 @@
         33 // /
         38 // ctrl
     >;
+
+    require-prior-idle-ms = <200>;
 };
 
 &spi0 {
