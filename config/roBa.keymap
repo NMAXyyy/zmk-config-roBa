@@ -112,7 +112,7 @@
         WIN_LAYER {
             bindings = <
 &kp Q                         &kp W         &kp E          &kp R                &kp T                                                                 &kp Y        &kp U  &kp I      &kp O       &kp P
-&kp A                         &kp S         &lt 2 D        &lt 1 F              &kp G                                   &none          &none          &kp H        &kp J  &lt 6 K    &kp L       &kp MINUS
+&kp A                         &kp S         &lt 2 D        &lt 1 F              &kp G                                   &none          &none          &kp H        &kp J  &kp K      &lt 6 L     &kp MINUS
 &mt_exit_AML_on_tap LSHIFT Z  &kp X         &kp C          &kp V                &kp B                                   &none          &none          &kp N        &kp M  &kp COMMA  &kp PERIOD  &mt RIGHT_SHIFT QUESTION
 &kp LEFT_GUI                  &win_alt_tab  &kp LS(LG(A))  &mt LEFT_ALT ESCAPE  &mt_exit_AML_on_tap LEFT_CONTROL SPACE  &lt 3 TAB      &kp BACKSPACE  &lt 4 ENTER                                &kp DELETE
             >;
@@ -156,9 +156,9 @@
 
         AML {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &trans  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB2  &mkp MB1  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
             >;
         };
