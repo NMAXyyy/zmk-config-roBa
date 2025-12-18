@@ -117,8 +117,18 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        input-processors = <&zip_temp_layer 5 10000>;
+        input-processors = <&zip_temp_layer 5 100000>;
     };
+};
+
+&zip_temp_layer {
+    excluded-positions = <
+        18 // J
+        20 // K
+        22 // Z
+        33 // /
+        38 // ctrl
+    >;
 };
 
 &spi0 {
