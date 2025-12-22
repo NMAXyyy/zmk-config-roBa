@@ -98,7 +98,7 @@
     combos {
         compatible = "zmk,combos";
 
-        ABC {
+        eisu {
             bindings = <&kp INT_MUHENKAN>;
             key-positions = <2 1>;
         };
@@ -111,6 +111,19 @@
         printscreen {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <31 32>;
+        };
+
+        abc {
+            bindings = <&kp LANGUAGE_2>;
+            key-positions = <1 2>;
+            timeout-ms = <0>;
+            layers = <1>;
+        };
+
+        aiu {
+            bindings = <&kp LANGUAGE_1>;
+            key-positions = <7 8>;
+            layers = <1>;
         };
     };
 
