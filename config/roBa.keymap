@@ -93,6 +93,32 @@
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
             label = "KP_exit_AML";
         };
+
+        bt_win: bt_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&tog_off 0 &tog_off 1>,
+                <&macro_wait_time 200>,
+                <&bt BT_SEL 0>,
+                <&macro_wait_time 500>,
+                <&tog_on 0 &bt BT_DISC 1>;
+
+            label = "BT_WIN";
+        };
+
+        bt_mac: bt_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&tog_off 0 &tog_off 1>,
+                <&macro_wait_time 200>,
+                <&bt BT_SEL 1>,
+                <&macro_wait_time 500>,
+                <&tog_on 1 &bt BT_DISC 0>;
+
+            label = "BT_MAC";
+        };
     };
 
     combos {
