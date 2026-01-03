@@ -134,11 +134,6 @@
             key-positions = <7 8>;
         };
 
-        printscreen {
-            bindings = <&kp PRINTSCREEN>;
-            key-positions = <31 32>;
-        };
-
         abc {
             bindings = <&kp LANGUAGE_2>;
             key-positions = <1 2>;
@@ -149,6 +144,18 @@
         aiu {
             bindings = <&kp LANGUAGE_1>;
             key-positions = <7 8>;
+            layers = <1>;
+        };
+
+        alt_tab {
+            bindings = <&win_alt_tab>;
+            key-positions = <12 11>;
+        };
+
+        cmd_tab {
+            bindings = <&cmd_tab_hold>;
+            key-positions = <12 11>;
+            timeout-ms = <0>;
             layers = <1>;
         };
     };
