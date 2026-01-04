@@ -134,20 +134,15 @@
             key-positions = <7 8>;
         };
 
-        printscreen {
-            bindings = <&kp PRINTSCREEN>;
-            key-positions = <31 32>;
-        };
-
         abc {
-            bindings = <&kp LANGUAGE_2>;
+            bindings = <&kp LANG2>;
             key-positions = <1 2>;
             timeout-ms = <0>;
             layers = <1>;
         };
 
         aiu {
-            bindings = <&kp LANGUAGE_1>;
+            bindings = <&kp LANG1>;
             key-positions = <7 8>;
             layers = <1>;
         };
