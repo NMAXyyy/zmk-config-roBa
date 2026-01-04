@@ -139,7 +139,6 @@
         abc {
             bindings = <&kp LANG2>;
             key-positions = <1 2>;
-            timeout-ms = <0>;
             layers = <0>;
         };
 
