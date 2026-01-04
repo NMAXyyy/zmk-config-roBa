@@ -94,11 +94,11 @@
             label = "KP_exit_AML";
         };
 
-        bt_win: bt_win {
+        bt_mac: bt_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&tog_off 0 &tog_off 1>,
+                <&tog_off 1 &tog_off 0>,
                 <&macro_wait_time 200>,
                 <&bt BT_SEL 0>,
                 <&macro_wait_time 500>,
@@ -107,11 +107,11 @@
             label = "BT_WIN";
         };
 
-        bt_mac: bt_mac {
+        bt_win: bt_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&tog_off 0 &tog_off 1>,
+                <&tog_off 1 &tog_off 0>,
                 <&macro_wait_time 200>,
                 <&bt BT_SEL 1>,
                 <&macro_wait_time 500>,
@@ -127,45 +127,47 @@
         eisu {
             bindings = <&kp INT_MUHENKAN>;
             key-positions = <2 1>;
+            layers = <1>;
         };
 
         kana {
             bindings = <&kp INTERNATIONAL_4>;
             key-positions = <7 8>;
+            layers = <1>;
         };
 
         abc {
             bindings = <&kp LANG2>;
             key-positions = <1 2>;
             timeout-ms = <0>;
-            layers = <1>;
+            layers = <0>;
         };
 
         aiu {
             bindings = <&kp LANG1>;
             key-positions = <7 8>;
-            layers = <1>;
+            layers = <0>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        WIN_LAYER {
-            bindings = <
-&kp Q                         &kp W         &kp E            &kp R                &kp T                                                                 &kp Y        &kp U  &kp I      &kp O       &kp P
-&kp A                         &kp S         &lt 3 D          &lt 2 F              &kp G                                   &none          &none          &kp H        &kp J  &kp K      &lt 8 L     &kp MINUS
-&mt_exit_AML_on_tap LSHIFT Z  &kp X         &kp C            &kp V                &kp B                                   &none          &none          &kp N        &kp M  &kp COMMA  &kp PERIOD  &mt_exit_AML_on_tap RIGHT_SHIFT QUESTION
-&kp LEFT_GUI                  &win_alt_tab  &kp PRINTSCREEN  &mt LEFT_ALT ESCAPE  &mt_exit_AML_on_tap LEFT_CONTROL SPACE  &lt 4 TAB      &kp BACKSPACE  &lt 5 ENTER                                &kp DELETE
-            >;
-        };
-
         MAC_LAYER {
             bindings = <
 &kp Q                             &kp W          &kp E                 &kp R                &kp T                                                                 &kp Y        &kp U  &kp I      &kp O    &kp P
 &kp A                             &kp S          &lt 3 D               &lt 2 F              &kp G                                   &none          &none          &kp H        &kp J  &kp K      &lt 8 L  &kp MINUS
 &mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X          &kp C                 &kp V                &kp B                                   &none          &none          &kp N        &kp M  &kp COMMA  &kp DOT  &mt_exit_AML_on_tap RIGHT_SHIFT QUESTION
-&kp LEFT_CONTROL                  &cmd_tab_hold  &kp LG(LS(NUMBER_3))  &mt LEFT_ALT ESCAPE  &mt_exit_AML_on_tap LEFT_COMMAND SPACE  &lt 4 TAB      &kp BACKSPACE  &lt 6 ENTER                             &kp DELETE
+&kp LEFT_CONTROL                  &cmd_tab_hold  &kp LG(LS(NUMBER_3))  &mt LEFT_ALT ESCAPE  &mt_exit_AML_on_tap LEFT_COMMAND SPACE  &lt 4 TAB      &kp BACKSPACE  &lt 5 ENTER                             &kp DELETE
+            >;
+        };
+
+        WIN_LAYER {
+            bindings = <
+&kp Q                         &kp W         &kp E            &kp R                &kp T                                                                 &kp Y        &kp U  &kp I      &kp O       &kp P
+&kp A                         &kp S         &lt 3 D          &lt 2 F              &kp G                                   &none          &none          &kp H        &kp J  &kp K      &lt 8 L     &kp MINUS
+&mt_exit_AML_on_tap LSHIFT Z  &kp X         &kp C            &kp V                &kp B                                   &none          &none          &kp N        &kp M  &kp COMMA  &kp PERIOD  &mt_exit_AML_on_tap RIGHT_SHIFT QUESTION
+&kp LEFT_GUI                  &win_alt_tab  &kp PRINTSCREEN  &mt LEFT_ALT ESCAPE  &mt_exit_AML_on_tap LEFT_CONTROL SPACE  &lt 4 TAB      &kp BACKSPACE  &lt 6 ENTER                                &kp DELETE
             >;
         };
 
@@ -189,19 +191,10 @@
 
         FN {
             bindings = <
-&bt BT_CLR_ALL  &trans   &trans  &trans  &trans                      &trans  &kp F7  &kp F8  &kp F9  &kp F10
-&trans          &trans   &trans  &trans  &trans  &trans      &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&trans          &trans   &trans  &trans  &trans  &trans      &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F12
-&bt_win         &bt_mac  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
-            >;
-        };
-
-        WIN_MOVE {
-            bindings = <
-&trans                   &trans              &kp LG(UP_ARROW)    &trans               &trans                      &none     &kp LS(LC(TAB))     &kp LG(TAB)     &kp LC(TAB)          &none
-&kp LG(LS(RIGHT_ARROW))  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &trans  &trans      &trans  &none     &kp LA(LEFT_ARROW)  &kp UP_ARROW    &kp LA(RIGHT_ARROW)  &none
-&trans                   &trans              &trans              &trans               &trans  &trans      &trans  &kp HOME  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW      &kp END
-&trans                   &trans              &trans              &trans               &trans  &trans      &trans  &trans                                                             &none
+&bt BT_CLR_ALL  &trans  &trans   &trans  &trans                      &trans  &kp F7  &kp F8  &kp F9  &kp F10
+&trans          &trans  &trans   &trans  &trans  &trans      &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11
+&trans          &trans  &trans   &trans  &trans  &trans      &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F12
+&bt_win         &none   &bt_win  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
@@ -211,6 +204,15 @@
 &trans  &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)  &trans  &trans      &trans  &trans              &kp LG(LEFT_BRACKET)  &kp UP_ARROW      &kp LG(RIGHT_BRACKET)  &trans
 &trans  &trans              &trans              &trans               &trans  &trans      &trans  &kp LG(LEFT_ARROW)  &kp LEFT_ARROW        &kp DOWN_ARROW    &kp RIGHT_ARROW        &kp LG(RIGHT_ARROW)
 &trans  &trans              &trans              &trans               &trans  &trans      &trans  &trans                                                                             &trans
+            >;
+        };
+
+        WIN_MOVE {
+            bindings = <
+&trans                   &trans              &kp LG(UP_ARROW)    &trans               &trans                      &none     &kp LS(LC(TAB))     &kp LG(TAB)     &kp LC(TAB)          &none
+&kp LG(LS(RIGHT_ARROW))  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &trans  &trans      &trans  &none     &kp LA(LEFT_ARROW)  &kp UP_ARROW    &kp LA(RIGHT_ARROW)  &none
+&trans                   &trans              &trans              &trans               &trans  &trans      &trans  &kp HOME  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW      &kp END
+&trans                   &trans              &trans              &trans               &trans  &trans      &trans  &trans                                                             &none
             >;
         };
 
