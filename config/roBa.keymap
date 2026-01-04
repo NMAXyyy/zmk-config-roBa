@@ -94,7 +94,7 @@
             label = "KP_exit_AML";
         };
 
-        bt_mac: bt_win {
+        bt_mac: bt_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -104,10 +104,10 @@
                 <&macro_wait_time 500>,
                 <&tog_on 0 &bt BT_DISC 1>;
 
-            label = "BT_WIN";
+            label = "BT_MAC";
         };
 
-        bt_win: bt_mac {
+        bt_win: bt_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -117,7 +117,7 @@
                 <&macro_wait_time 500>,
                 <&tog_on 1 &bt BT_DISC 0>;
 
-            label = "BT_MAC";
+            label = "BT_WIN";
         };
     };
 
