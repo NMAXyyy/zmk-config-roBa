@@ -148,7 +148,7 @@
             layers = <0>;
         };
 
-        MB2 {
+        mb2 {
             bindings = <&mkp MB2>;
             key-positions = <19 20>;
         };
